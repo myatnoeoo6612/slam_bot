@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="slam_bot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-1.7489E-05 -0.00049303 0.12274"
+        rpy="0 0 0" />
+      <mass
+        value="1.7054" />
+      <inertia
+        ixx="0.0020629"
+        ixy="9.3564E-07"
+        ixz="4.3627E-08"
+        iyy="0.0045809"
+        iyz="-5.7177E-06"
+        izz="0.0062217" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slam_bot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.49804 0.49804 0.49804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slam_bot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.000366440701438736 -5.19104554896899E-08 -2.5962816660452E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0338741252753089" />
+      <inertia
+        ixx="2.32972128267653E-05"
+        ixy="-5.14344193952486E-12"
+        ixz="-4.43613850658384E-12"
+        iyy="1.26336871199194E-05"
+        iyz="-4.23491351065063E-10"
+        izz="1.26329065025615E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slam_bot/meshes/left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slam_bot/meshes/left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.08244 0.00044127 -0.0245"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="0.000366440701435697 -3.25177562376933E-08 4.80762121987666E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.033874125275309" />
+      <inertia
+        ixx="2.32972128267653E-05"
+        ixy="2.30833895149757E-12"
+        ixz="-6.38794890313064E-12"
+        iyy="1.26338614201861E-05"
+        iyz="-1.13589294659243E-10"
+        izz="1.26327322022949E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slam_bot/meshes/right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slam_bot/meshes/right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.08244 0.00044127 -0.0245"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="front_caster_frame_link">
+    <inertial>
+      <origin
+        xyz="0.00348441243526642 0.00224005174745512 -0.00790866964198877"
+        rpy="0 0 0" />
+      <mass
+        value="0.00300582274036254" />
+      <inertia
+        ixx="2.92826786865183E-07"
+        ixy="2.569429152066E-08"
+        ixz="7.89644152062036E-08"
+        iyy="2.69377471585607E-07"
+        iyz="5.07644773838694E-08"
+        izz="2.68764631211896E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slam_bot/meshes/front_caster_frame_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slam_bot/meshes/front_caster_frame_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_caster_frame_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.060441 -0.0285"
+      rpy="0 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_caster_frame_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="front_caster_wheel_link">
+    <inertial>
+      <origin
+        xyz="3.40005801291454E-14 2.64510635616944E-14 6.80011602582908E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.00247954599104152" />
+      <inertia
+        ixx="1.83802193681604E-07"
+        ixy="1.75362289861233E-22"
+        ixz="-3.80704142361078E-23"
+        iyy="1.14854546808248E-07"
+        iyz="-1.26360212135229E-23"
+        izz="1.14854546808248E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slam_bot/meshes/front_caster_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slam_bot/meshes/front_caster_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_caster_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.009885 0.0063548 -0.019"
+      rpy="0 0 -0.99944" />
+    <parent
+      link="front_caster_frame_link" />
+    <child
+      link="front_caster_wheel_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="back_caster_frame_link">
+    <inertial>
+      <origin
+        xyz="-0.00342931073113072 0.00232352959157259 -0.00790866964286974"
+        rpy="0 0 0" />
+      <mass
+        value="0.00300582274036254" />
+      <inertia
+        ixx="2.91572704496389E-07"
+        ixy="-2.62303501122907E-08"
+        ixz="-7.77156899272754E-08"
+        iyy="2.70631553954401E-07"
+        iyz="5.26562681173162E-08"
+        izz="2.68764631211896E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slam_bot/meshes/back_caster_frame_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slam_bot/meshes/back_caster_frame_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_caster_frame_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.059559 -0.0285"
+      rpy="0 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_caster_frame_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="back_caster_wheel_link">
+    <inertial>
+      <origin
+        xyz="-9.95037385820297E-15 -6.75848266240564E-15 6.64017452134402E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.00247954599104152" />
+      <inertia
+        ixx="1.83802193681604E-07"
+        ixy="-5.95570041038104E-23"
+        ixz="-8.52214753953738E-24"
+        iyy="1.14854546808247E-07"
+        iyz="5.16539675591825E-25"
+        izz="1.14854546808247E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slam_bot/meshes/back_caster_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slam_bot/meshes/back_caster_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_caster_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0097287 0.0065916 -0.019"
+      rpy="0 0 -2.1663" />
+    <parent
+      link="back_caster_frame_link" />
+    <child
+      link="back_caster_wheel_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+</robot>
